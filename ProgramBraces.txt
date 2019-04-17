@@ -1,0 +1,24 @@
+# importing the math function
+import math
+#Taking the inputs from the user
+a=int(input("Enter first side: "))
+b=int(input("Enter second side: "))
+c=int(input("Enter third side: "))
+braces='{[[('
+#Calculating Area of the Traingle
+s=(a+b+c)/2
+area=math.sqrt(s*(s-a)*(s-b)*(s-c))
+print(braces,"Area of the triangle is: ",round(area,2),end=" ")
+# Re Arranging the braces in a correct order by using loop
+braces1 = "{[[("[::-1]
+for i in range(0,len(braces1)):
+    l=braces1[i]
+    if l == '{':
+        print('}', end ="")
+    elif l == '(':
+        print(')', end = "")
+    else:
+        print(']', end = "")
+
+# braces1=')]]}'
+# print(braces1)

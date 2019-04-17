@@ -1,0 +1,114 @@
+#class creation
+class Graph(object):
+# #  initializes a office object 
+#             If no dictionary or None is given, 
+#             an empty dictionary will be used
+        
+    def __init__(self, office_dict=None):
+       
+        if office_dict == None:
+            office_dict = {}
+        self.__office_dict = office_dict
+
+    def length(self):
+      return list(self.__office_dict.keys())
+# returns the Company of a office 
+    def Company(self):
+        return list(self.__office_dict.keys()) 
+# returns the bulidings of a office 
+    def bulidings(self):
+        return list(self.__office_dict.keys())
+# returns the Depertments of a office         
+    def Depertments(self):
+        return list(self.__office_dict.keys()) 
+# returns the Employees of a office 
+    def Employees(self):
+        return list(self.__office_dict.keys())   
+# Assigning the values in a dictionary
+if __name__ == "__main__":
+
+    i = {
+      "comp_a" : ["bldg_1","bldg_2","bldg_3","bldg_4"],
+    } 
+
+    g = {
+          "bldg_1" : ["dept_a1","dept_b1","dept_c1"],
+          "bldg_2" : ["dept_a2","dept_b2"],
+          "bldg_3" : ["dept_a3"],
+          "bldg_4" : ["dept_a4","dept_b4","dept_c4","dept_d4"],
+    }
+
+    h = {
+          "dept_a1" : ["emp_a11", "emp_a12"],
+          "dept_b1" : ["emp_b11", "emp_b12","emp_b13","emp_b14"],
+          "dept_c1" : ["emp_c11"],
+          "dept_a2" : ["emp_a21", "emp_a22","emp_a23","emp_a24","emp_a25"],
+          "dept_b2" : ["emp_b21", "emp_b22","emp_b23"],
+          "dept_a3" : ["emp_a31", "emp_a32"],
+          "dept_a4" : ["emp_a41", "emp_a42","emp_a43","emp_a44","emp_a45","emp_a46"],
+          "dept_b4" : ["emp_b41"],
+          "dept_c4" : ["emp_c41", "emp_c42","emp_c43"],
+          "dept_d4" : ["emp_d41", "emp_d42"],
+        }
+
+    j={
+      "emp-a11":[],"emp_a12":[],"emp_b11":[],"emp_b12":[],"emp_b13":[],"emp_b14":[],"emp_c11":[],"emp_a21":[],"emp_a22":[],"emp_a23":[],"emp_a24":[],"emp_a25":[],"emp_b21":[],"emp_b22":[],"emp_b23":[],"emp_a31":[],"emp_a32":[],"emp_a41":[],"emp_a42":[],"emp_a43":[],"emp_a44":[],"emp_a45":[],"emp_a46":[],"emp_b41":[],"emp_c41":[],"emp_c42":[],"emp_c43":[],"emp_d41":[],"emp_d42":[],
+    }
+#Printing the Company
+    print(" ")
+    graph = Graph(i)
+    print("Company Name:")
+    print(graph.Company())
+    print(" ")
+#Printing the bulidings
+    graph = Graph(g)
+    print("Different Bulidings:")
+    print(graph.bulidings())
+    print(" ")
+#Printing the Depertments
+    graph = Graph(h)
+    print("Different Depertments:")
+    print(graph.Depertments())
+    print(" ")
+#Printing the Employees
+    graph = Graph(j)
+    print("Different Employees:")
+    print(graph.Employees())
+    print(" ")
+#Finding the length 
+    print ("Total Number Of Compaines:",len(i))   
+    print ("Total Number Of Employees:",len(j))
+    print ("Total Number Of Bulidings:",len(g))
+    print ("Total Number Of Depertnments:",len(h))
+    print(" ")
+#Printing the Number Of Depertnments in Buldings    
+    bldg_1 = ["dept_a1","dept_b1","dept_c1"]
+    print ("Number Of Depertnments in Bulding1",len(bldg_1))
+    bldg_2 = ["dept_a2","dept_b2"]
+    print ("Number Of Depertnments in Bulding2",len(bldg_2)) 
+    bldg_3 = ["dept_a3"]
+    print ("Number Of Depertnments in Bulding3",len(bldg_3))
+    bldg_4 = ["dept_a4","dept_b4","dept_c4","dept_d4"]
+    print ("Number Of Depertnments in Bulding4",len(bldg_4))
+#Printing the Number Of Employees in Depertnment  
+    print( )
+    dept_a1 = ["emp_a11", "emp_a12"]
+    print ("Number Of Employees in dept_a1",len(dept_a1))
+    dept_b1 = ["emp_b11", "emp_b12","emp_b13","emp_b14"]
+    print ("Number Of Employees in dept_b1",len(dept_b1))
+    dept_c1 = ["emp_c11"]
+    print ("Number Of Employees in dept_c1",len(dept_c1))
+    dept_a2 = ["emp_a21", "emp_a22","emp_a23","emp_a24","emp_a25"]
+    print ("Number Of Employees in dept_a2",len(dept_a2))
+    dept_b2 = ["emp_b21", "emp_b22","emp_b23"]
+    print ("Number Of Employees in dept_b2",len(dept_b2))
+    dept_a3 = ["emp_a31", "emp_a32"]
+    print ("Number Of Employees in dept_a3",len(dept_a3))
+    dept_a4 = ["emp_a41", "emp_a42","emp_a43","emp_a44","emp_a45","emp_a46"],
+    print ("Number Of Employees in dept_a4",len(dept_a4))
+    dept_b4 = ["emp_b41"],
+    print ("Number Of Employees in dept_b4",len(dept_b4))
+    dept_c4 = ["emp_c41", "emp_c42","emp_c43"]
+    print ("Number Of Employees in dept_c4",len(dept_c4))
+    dept_d4 = ["emp_d41", "emp_d42"]
+    print ("Number Of Employees in dept_d4",len(dept_d4))

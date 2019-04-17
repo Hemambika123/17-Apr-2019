@@ -1,0 +1,27 @@
+#defining a variable
+def number(sum) :
+#for loop to check whether the sum is present in a list
+  if sum in list:
+    return True
+  else:
+    return False
+# Assigning some valus in a list
+list= [4,18,24,36,44,57,63,76,89,94,108,123,137,143,159,190,206,284,308,404]  
+# Accepting inputs from the user and storing them in variables 
+num1 = int(input("Enter a number:"))
+print(num1)
+num2 = int(input("Enter a number:"))
+print(num2)
+#performing the addition  
+sum= num1+num2 
+#printing the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+# Printing the boolen value
+f=bool(number(sum))
+print(f) 
+
+
+
+
+     
+  
